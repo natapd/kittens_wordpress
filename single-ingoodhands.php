@@ -1,20 +1,20 @@
-
 <?php get_header() ?>
-
 <?php the_post(); ?>
  <main class="page-kittens">
- <div class="page-kittens__wrapper">
+  
+        
+        <div class="page-kittens__wrapper">
          <section class="kitten01">
             <div class="kitten01__wrapper">
                 <nav class="kittens__fastmenu">
                     <div><a href="<?php bloginfo( 'url' ); ?>">Главная</a>/</div>
-                    <div><a href="<?php the_permalink( '33' ); ?>">Котята в продаже</a>/</div>
+                    <div><a href="<?php the_permalink( '39' ); ?>">В добрые руки</a>/</div>
                     <div><a class="kittens__fastmenu__name"><?php the_title(); ?></a></div>
                 </nav>
                 <div class="kitten__about">
                     <div class="kitten__photo">
                         <?php the_post_thumbnail( full ); ?> 
-                        <span <?php post_class('kitten__status'); ?>><?php the_terms( get_the_ID(), 'status1', '', '', '' ); ?></span>
+                        
                     </div>
                     <div class="kitten__about__wrapper">
                         <div class="kitten__data">
@@ -24,19 +24,21 @@
                             <div class="kitten__data__field"><b>Порода: </b><p class="kitten__breed"><?php the_field('breed'); ?></p></div>
                             <div class="kitten__data__field"><b>Окрас: </b><p class="kitten__color"><?php the_field('color'); ?></p></div>
                             <div class="kitten__data__field"><b>Дата рождения: </b><p class="kitten__bdate"><?php the_field('birth_date'); ?></p></div>
-
-                            
                         </div>
                         <div class="button__wrapper"><button class="kitten__book-btn kitten_btn btn">Забронировать</button></div>
                     </div>
                 </div>
                 
             </div>
+            <div class="forfree1__desr">
+                <h3>Описание </h3>
+                 <?php the_field('desc'); ?>
+             </div>
             <div class="kitten__gallery">
                 <h3>Фотографии </h3>
                  <div class="kitten_photoBlock">
 
-                     <?php the_content(); ?>   
+                     <?php the_content(); ?>    
                  </div>
              </div>
           </section>
@@ -48,45 +50,12 @@
                               $posts = get_posts( array(
                               'numberposts' => 3,
                               'order' => ASC,
-                              'post_type'   => array('kittens'),
+                              'post_type'   => 'kittens',
                               'tax_query' => array(
                                     array(
                                     'taxonomy' => 'status1',
                                     'field' => 'slug',
                                     'terms' => 'free')),
-
-                              'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
-                              ) );
-                              foreach( $posts as $post ){ ?>  <?php
-                              setup_postdata($post);
-                              ?>
-                       
-                          <li class="kittens__also__item">
-                            <a class="kittens__also__content" href="<?php the_permalink(); ?>">
-                                <div class="kittens__also__photo">
-                                    <?php the_post_thumbnail( full ); ?> 
-                                   
-                                </div>
-                                <div class="kittens__also__description">
-                                    <div class="kittens__also__field"><b>Имя: <?php the_title();?></b><p class="kittens__also__name"></p></div>
-                                    <div class="kittens__also__field"><b>Пол: </b><p class="kittens__also__sex"> <?php the_field('sex'); ?></p></div>
-                                    <div class="kittens__also__field"><b>Порода: </b><p class="kittens__also__breed"> <?php the_field('breed'); ?></p></div>
-                                    
-                                </div>
-                            </a>
-                     
-                         </li>
-                         <?php
-          }
-          wp_reset_postdata(); // сброс
-          ?>
-             <?php
-                              // параметры по умолчанию
-                              $posts = get_posts( array(
-                              'numberposts' => 3,
-                              'order' => ASC,
-                              'post_type'   => array('ingoodhands'),
-                              
 
                               'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
                               ) );
@@ -120,5 +89,4 @@
           </div>
         
     </main>     
-
 <?php get_footer() ?>

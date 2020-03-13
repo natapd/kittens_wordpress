@@ -1590,9 +1590,16 @@ padding: 25px;
 .forfree-about__dicsr p{
   text-indent: 30px;
 }
-.forfree-about__img1, .forfree-about__img2, .forfree-about__img3, .forfree-about__img4{
+.forfree-about__ingoodhands1 img, .forfree-about__ingoodhands2 img,
+ .forfree-about__ingoodhands3 img, .forfree-about__ingoodhands4 img{
   display: block;
   margin: 0 auto;
+}
+.forfree-about__ingoodhands1 img, .forfree-about__ingoodhands3 img{
+  width:200px;
+}
+.forfree-about__ingoodhands2 img, .forfree-about__ingoodhands4 img{
+  width:400px;
 }
 .ingoodhands__list{
  
@@ -1691,11 +1698,11 @@ padding: 25px;
 .forfree-about__block1 p{
   margin:0;
 }
-.forfree-about__img1, .forfree-about__img3{
+.forfree-about__ingoodhands1, .forfree-about__ingoodhands3{
   margin-right: 10px;
   flex-shrink: 0;
 }
-.forfree-about__img2, .forfree-about__img4{
+.forfree-about__ingoodhands2, .forfree-about__ingoodhands4{
   order: 2;
   margin-left: 10px;
   flex-shrink: 0;

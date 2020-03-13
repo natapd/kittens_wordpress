@@ -78,47 +78,5 @@ RightArrow.addEventListener('click',function(){
 });
 
 
-//****************************************************************/
-/*var CatCart=document.querySelector('#kittens-for-sale').content.querySelector('li');
-var CatForSaleList=document.querySelector('.kittens-for-sale__list');
-var renderCatsCart=function(cat){
-  var elem=CatCart.cloneNode(true);
-  elem.querySelector('.kittens-for-sale__img').src=cat.src;
-  elem.querySelector('.kittens-for-sale__name').textContent=cat.name;
-  elem.querySelector('.kittens-for-sale__btn').href=cat.page;
-  if (cat.status!=='free')
-  {
-  elem.querySelector('.kitten__status').textContent=cat.status;
-  }
-    else {
-      elem.querySelector('.kitten__status').classList.add('visually-hidden');
-    };
-  return elem;
-} */
-/*Выбор рандомного элемента массива*/
-/*var randomf=function(LengthArray){
 
-    var RandomI=Math.round(Math.random()*(LengthArray-1));
-    return RandomI;
-
-  };
-
-function getRandom(arr,max) {
-  var result=[];
-    while (max>0){
-    var rand=randomf(arr.length);
-    
-    if (result.indexOf(arr[rand]) === -1) {
-      result.push(arr[rand]); 
-      max--;
-    }
-  }
-    return result;
-}
-var RandomCats=getRandom(Cats,3);
-
-for (var i=0;i<RandomCats.length;i++){
-
-CatForSaleList.appendChild(renderCatsCart(RandomCats[i]));
-} */
 })();

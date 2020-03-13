@@ -3,7 +3,7 @@
 <?php get_header() ?>
 <main class="page-kittens">
        
-        <section class="kittens" id="section_kittens">
+        <section class="kittens_section" id="section_kittens">
             <div class="kittens__wrapper">
                 <h2 class="kittens__title section-title">Котята в продаже</h2>
                     
