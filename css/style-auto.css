@@ -1,0 +1,1853 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
+@font-face {
+    font-family: 'BreeCYR';
+    src: url('../fonts/BreeCYR-Light.woff') format('woff'),
+         url('../fonts/BreeCYR-Light.woff2') format('woff2');
+    font-display:swap;    
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BreeCYR';
+    src: url('../fonts/BreeCYR-Book.woff') format('woff'),
+         url('../fonts/BreeCYR-Book.woff2') format('woff2');
+     font-display:swap;   
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+  min-width:320px;
+  margin: 0;
+  padding: 0;
+  font-family: "BreeCYR", "Arial", sans-serif;
+  background-color: #ffffff;
+  color:#000000;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 27px;
+  }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+.hidden{
+  display: none;
+}
+@media(min-width: 768px){
+  body{
+    
+    margin:0 auto;}
+    }
+@media(min-width:1200px){
+  body{
+  margin:0 auto;}
+   }
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  -webkit-clip-path: inset(100%);
+
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+  .btn{
+    padding:10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+  }
+.EmailLink{
+  cursor: pointer;
+}
+  .formEmail, .formBooking{
+  position: fixed;
+
+    z-index: 111;
+    top: 0;
+    width: 100%;
+  height:100%;
+    left: 0;
+
+    overflow: auto;
+
+    background: rgba(0, 0, 0, .8);
+}
+.formEmail__wrapper{
+  
+  color:#000;
+   width:500px;
+  min-height:400px;
+  background: #fff;
+  margin:0 auto;
+  margin-top:10%;
+  
+}
+.page-form, .booking-form{
+  padding:25px;
+  background-image: url("../img/section_back2.jpg");
+
+position: relative;
+}
+.page-form__input, .page-form__textarea, .booking-form__input, .booking-form__textarea{
+  width:99%;
+  margin-bottom: 15px;
+}
+.page-form__textarea, .booking-form__textarea{
+  min-height: 100px;
+}
+.page-form__btn{
+  display: block;
+  margin: 0 auto;
+}
+.close-popup, .close-popup__booking{
+  position: absolute;
+  top:10px;
+  right: 10px;
+  font-size:30px;
+}
+@media(max-width: 767px){
+.formEmail__wrapper{
+  width:100%;
+  min-height: 360px;
+}
+}
+/*Верхнее меню*/
+.top-header{
+  margin:0;
+  background-color:#6d2b5e;
+  color:#fff;
+  height:93px;
+  width:100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+
+.top-header__list{
+  margin:0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.top-header__item{
+
+}
+.top-header__item a{
+  display: block;
+  color:white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0;
+  line-height: 20px;
+  padding: 10px 10px;
+  padding-bottom: 15px;
+  
+}
+.social__link img:hover{
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+ /*Верхнее меню только для моб версии*/
+
+@media(max-width: 767px){
+  .top-header{
+  height:53px;}
+
+  .social{
+
+  -webkit-box-align: center;
+
+      -ms-flex-align: center;
+
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  }
+}
+/*Верхнее меню от планшетной версии*/
+@media(min-width: 768px){
+  .top-header__item a{
+    font-size: 16px;}
+}
+/*Главное меню*/
+.main-nav{
+  
+  position:relative;
+  width:auto;
+  margin-top:0;
+  min-height:51px;
+  
+  background-color: #7b8f38;
+}
+/* .main-nav::after{
+
+    content: "";
+    background-image: url(../img/line.png);
+    background-repeat: repeat-x;
+    background-position: center top;
+    display: block;
+    height: 49px;
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    overflow: hidden;
+    z-index: 9;
+ } */
+.main-nav__toggle {
+  position: absolute;
+
+  top: 0px;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 50px;
+  height: 51px;
+  background-color: #606b3a;
+  cursor: pointer;
+  border: none;
+}
+.main-nav__toggle:hover,
+.main-nav__toggle:active {
+  background-color: #b2c76c;
+}
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 12px;
+  width: 30px;
+  height: 2px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
+          box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
+}
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 0 8px 0 0 rgba(255, 255, 255, 0.3), 0 16px 0 0 rgba(255, 255, 255, 0.3);
+          box-shadow: 0 8px 0 0 rgba(255, 255, 255, 0.3), 0 16px 0 0 rgba(255, 255, 255, 0.3);
+}
+.main-nav--opened .main-nav__toggle {
+  top: 0;
+  right: 0;
+ z-index:13;
+}
+.main-nav--opened .main-nav__toggle::before,
+.main-nav--opened .main-nav__toggle::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 8px;
+  width: 35px;
+  height: 2px;
+  background-color: #ffffff;
+}
+.main-nav--opened .main-nav__toggle::before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.main-nav--opened .main-nav__toggle::after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.main-nav--opened .main-nav__toggle:active::before,
+.main-nav--opened .main-nav__toggle:active::after {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.main-nav__list{
+  
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+ 
+}
+/*Меню мобильной версии*/
+@media(max-width: 767px){
+.main-nav--closed .main-nav__item {
+    display: none;
+  }
+  .main-header-logo{
+    position:absolute;
+    
+    left:0;
+    
+    z-index:9;
+  }
+  .main-header-logo img{
+    height: 51px;
+    width:auto;
+  }
+.main-nav--opened .main-nav__wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0px;
+    z-index: 10;
+    
+    background-color: #7b8f38;
+  }
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+  .main-nav--nojs .main-nav__wrapper {
+    position: static;
+    min-height: 0;
+  }
+  .main-nav--nojs .main-nav__item {
+    display: block;
+  }
+ .main-nav__item g{
+    fill:#fff;
+  }
+
+  .main-nav__item:hover, .main-nav__item .active-menu {
+  background-color: #b2c76c;
+ }
+  }
+  /*Меню для разрешения более 768px */
+
+  @media(min-width: 768px){
+  .main-header{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main-nav{
+    min-height:0;
+    -webkit-box-ordinal-group:1;
+        -ms-flex-order:0;
+            order:0;
+    width:100%;
+    background-color: #ffffff;
+
+  }
+   .main-nav__wrapper {
+    
+    
+    margin: 0 auto;
+    padding-top:10px;
+    padding-bottom:10px;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .main-header-logo{
+    /*margin-top:-50px;
+    align-self: center;*/
+    position: absolute;
+    top:0;
+    right:calc(50% - 92px);
+    z-index:20;
+
+  }
+  .main-nav__toggle{
+    display:none;
+  }
+
+  }
+
+ /*Стиль меню*/
+ .main-nav__item a{
+  display: block;
+  color:#fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 20px;
+  padding: 13px 21px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #fff;
+  
+}
+ 
+ @media(min-width: 768px){
+
+  .main-nav__list{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    
+    
+    -webkit-box-align: start;
+    
+    
+        -ms-flex-align: start;
+    
+    
+            align-items: flex-start;
+    
+    -ms-flex-wrap: wrap;
+    
+        flex-wrap: wrap;
+    
+
+  }
+ .main-nav__item{
+    margin-right:20px;
+  }
+  
+  .main-nav__item a{
+    color:#4B5D12;
+    min-width: 100px;
+
+  }
+  .main-nav__item a:hover, .main-nav__item .active-menu{
+    opacity: 0.8;
+    border-bottom: 1px solid #7b8f38;
+  }
+ }
+
+
+ /*Слайдер*/
+.slider{
+  background-color: #f7f5f6;
+  
+}
+ .slider__photo{
+  position: relative;
+  overflow: hidden;
+  max-height:600px;
+  max-width: 1600px;
+  margin: 0 auto;
+
+ }
+ .slider__photo img{
+ 
+  display: block;
+  /* vertical-align:bottom;*/
+ }
+
+ /*.slider__photo::after{
+
+    content: "";
+    /*background-image: url(../img/under_line.png);
+    background-repeat: repeat-x;
+    background-position: center top; */
+   /* display: block;
+    height: 49px;
+    position: absolute;
+    bottom: -20px;
+    width: 100%;
+    overflow: hidden;
+    z-index: 9;
+ } */
+ .slider__infoBlock{
+  position: absolute;
+  max-width: 80%;
+  margin: 0 auto;
+  top:10%;
+  left:5%;
+  /*background-color:rgba(255,255,255,0.4);*/
+  color:#fff;
+  border-radius: 2px;
+  height: 100%;
+ }
+ .infoBlock__inner{
+  padding:30px 25px;
+  }
+   
+ .infoBlock_descr{
+  margin-bottom: 15px;
+  
+ }
+ .slider__arrows-left{
+
+  position: absolute;
+  top:calc(50% - 20px);
+  left:10px;
+ }
+ .slider__arrows-left:hover,.slider__arrows-right:hover{
+  opacity:0.6;
+  cursor: pointer;
+ }
+  .slider__arrows-right{
+
+  position: absolute;
+  top:calc(50% - 20px);
+  right:10px;
+ }
+ .infoBlock__btnGroup{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+ }
+ .infoBlock_btn{
+  background-color: #7b8f38;
+  border-radius: 2px;
+  color:#fff;
+  margin-right: 25px;
+ }
+ .infoBlock_btn:hover{
+   background-color: #b2c76c;
+ }
+  .infoBlock__inner h3{
+    text-transform: uppercase;
+  }
+ @media(max-width: 767px){
+  .slider__infoBlock{
+    display: none;
+  }
+  /*.infoBlock__inner img{
+    display: none;
+  }
+  .infoBlock__inner h3{
+    font-size: 18px;
+  }
+  .infoBlock__inner a{
+    font-size: 12px;
+  }
+  .infoBlock_btn{
+    padding: 5px;
+  }
+  .infoBlock_descr{
+    display: none;
+  } */
+  .slider__photo::before{
+    top:0;
+  }
+ }
+ @media(min-width: 1200px){
+ .infoBlock__inner h3{
+    font-size: 30px;
+  }
+ .infoBlock_descr{
+  
+  font-size: 26px;
+ }}
+/*****************Продажа *********************/
+.btn__cart{
+ 
+  border:0;
+  
+ padding: 5px;
+ padding-bottom: 10px;
+  background-color: #7b8f38;
+
+
+}
+.btn__cart:hover{
+  background-color: #b2c76c;
+}
+.kittens-for-sale{
+  background-color: #b2c76c;
+}
+.kittens-for-sale__btn__wrapper{
+position: absolute;
+bottom:-20px;
+left: 60px;
+}
+.kittens-for-sale__wrapper{
+  padding:25px;
+  background-color: #fff;
+  
+}
+.kittens-for-sale__title{
+  text-align: center;
+  margin-bottom: 20px;
+  
+}
+.kittens-for-sale__title a{
+  color:#000;
+}
+.kittens-for-sale__title a:hover{
+  color:#6d2b5e;
+}
+.section-title{
+  text-align: center;
+  margin-top:0;
+}
+.kittens-for-sale__container{
+
+}
+.kittens-for-sale__list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.kittens-for-sale__item{
+  position: relative;
+  width:260px;
+  margin: 0 auto;
+  border: 1px solid black;
+  margin-bottom: 35px;
+}
+.kittens-for-sale__name{
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.kittens-for-sale__content{
+  margin-bottom: 25px;
+  position: relative;
+}
+@media(min-width: 768px){
+  .kittens-for-sale__title{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+.kittens-for-sale__wrapper{
+margin: 0 auto;
+}
+.kittens-for-sale__item{
+  margin-right:20px;
+  margin-left: 0px;
+}
+.kittens-for-sale__list{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+
+
+}}
+@media(min-width: 1200px){
+.kittens-for-sale__wrapper{
+max-width: 1200px;
+}}
+/*************Родились котята*****************/
+.kittens-expect{
+  background-image: url("../img/section_back2.jpg");
+ padding-bottom: 30px; 
+ background-attachment: fixed;
+}
+.kittens-expect__parentsBlock{
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+-webkit-box-pack: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+}
+@media(max-width: 767px){
+  .kittens-expect__parent img{
+    width:150px;
+  }
+}
+.kittens-expect__wrapper{
+  padding-top:25px;
+  padding-left:25px;
+  padding-right: 25px;
+}
+.kittens-expect__parent img{
+  border-radius: 50%;
+}
+.kittens-expect__parent img:hover{
+   -webkit-transition:-webkit-transform 0.5s ease;
+   transition:-webkit-transform 0.5s ease;
+   -o-transition:transform 0.5s ease;
+   transition:transform 0.5s ease;
+   transition:transform 0.5s ease, -webkit-transform 0.5s ease;
+-webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+        transform: scale(1.1);
+}
+
+
+.kittens-expect__plus{
+  margin-left:25px;
+  margin-right:25px;
+}
+
+.kittens-expect__dicsr{
+  margin: 0 auto;
+  margin-top:10px;
+  text-align: center;
+ 
+}
+.kittens-expect__dicsr img{
+  
+  border-radius: 3%;
+  
+}
+
+.kittens-expect__dicsr p{
+ 
+  text-align: left;
+}
+.kittens-expect__dicsr span{
+  font-weight: bold;
+  font-size:20px;
+}
+@media(max-width: 767px){
+  .kittens-expect__img{
+ display: none;
+}}
+@media(min-width: 768px){
+.kittens-expect__dicsr {
+  
+  width:70%;
+  background-color: #fff;
+  padding:10px 20px;
+  -webkit-box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, .25);
+          box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, .25);
+  border-radius: 10px;
+}
+.kittens-expect__dicsr p{
+  margin: 0;
+  
+  padding: 10px;
+  margin-right: 30px;
+  
+}
+.kittens-expect__img{
+  float:right;
+ width:50%;
+ margin:10px;
+
+}
+.clearfix::after{
+ content: "";
+ display: table;
+ clear: both;
+}
+.kittens-expect__img--mobile{
+  display: none;
+}
+}
+@media(min-width: 1200px){
+  .kittens-expect__img{
+ width:40%;
+
+}
+}
+/****************************************************/
+.about_cattery{
+  background-color: #b2c76c;
+
+}
+
+.about_cattery__wrapper{
+  margin:0;
+      padding-top:25px;
+      padding-bottom: 25px;
+      margin-left:25px;
+      margin-right: 25px;
+      
+      
+      
+    }  
+.cattery__photos{
+      
+      width:100%;
+      margin:0;
+      padding:0;
+      }
+.cphotos_block{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+      
+     
+      -ms-flex-wrap: wrap;
+      
+     
+          flex-wrap: wrap;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin:0;
+      padding: 0;
+      list-style: none;
+
+  }    
+ 
+.cphotos__item{
+    width:50%;
+    
+    margin:0;
+      padding: 0;
+overflow: hidden;
+      
+  }   
+  .cphotos__item img{
+    display: block; /*Иначе добавляется отступ внизу изображения*/
+    margin: 0 ;
+    padding: 0;
+    border: 0;
+    /*margin-bottom:-10px;*/
+  }
+  .cphotos__item img:hover{
+    -webkit-transition:-webkit-transform 0.5s ease;
+    transition:-webkit-transform 0.5s ease;
+    -o-transition:transform 0.5s ease;
+    transition:transform 0.5s ease;
+    transition:transform 0.5s ease, -webkit-transform 0.5s ease;
+-webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+        transform: scale(1.2);
+  }
+
+.read-more-btn{
+    
+    background-color: #6d2b5e;
+    
+  
+    color:#fff;
+    
+  }
+  .read-more-btn:hover{
+    background-color: #b663a4;
+  }
+  @media(min-width: 768px){
+    .about_cattery__wrapper{
+      margin-left:100px;
+      margin-right: 100px;
+      
+    }
+    .cattery__photos{
+      
+      width:100%;
+      }
+      .cattery-discr{
+        width: 100%;
+      }
+      .cphotos__item{
+        width:25%;
+        
+      }
+}
+
+  @media(min-width: 1200px){
+    .about_cattery__wrapper{
+      margin-left:100px;
+      margin-right: 100px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+    }
+
+    .cattery__photos{
+      margin-right:20px;
+      width:50%;
+      max-width: 530px;
+      }
+      .cattery-discr{
+        width: 50%;
+      }
+      .cphotos__item{
+        width: 50%;
+        
+      }
+  }
+
+
+/***************ФУТЕР******************************/
+
+.main-footer{
+  margin:0;
+  background-color:#6d2b5e;
+  color:#fff;
+  min-height:93px;
+  width:100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer__container{
+  padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+}
+.footer__main-menu__title{
+  color:#b2c76c;
+  font-weight: bold;
+}
+.main-footer a{
+  text-decoration: none;
+  color:white;
+}
+.main-footer a:hover{
+  opacity: 0.5;
+}
+.fmenu__list, .umenu__list, .smenu__list{
+  list-style: none;
+  margin:0;
+  padding: 0;
+}
+@media(min-width: 768px){
+  .footer__container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    
+  }
+}
+
+/********************ПРОИЗВОДИТЕЛИ*******************************/
+.sire{
+    background-image: url("../img/section_back2.jpg");
+ padding-bottom: 30px; 
+ background-attachment: fixed;
+}
+.sire__wrapper{
+  padding:25px;
+}
+.sire__container{
+  margin: 0 auto;
+}
+.sireBoys__list,.sireGirls__list{
+  list-style: none;
+  padding:0;
+
+}
+.sire__title{
+  text-align: center;
+
+}
+.sire__item{
+  max-width: 300px;
+  padding:10px;
+  margin:0 auto;
+  border:1px solid grey;
+  -webkit-box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, .25);
+          box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, .25);
+  margin-bottom: 25px;
+  background-color: #fff;
+
+}
+.sire__cat{
+  text-align: center;
+}
+.sire__img{
+border-radius: 50%;
+}
+.sire__name{
+  font-weight: bold;
+}
+.sire__description{
+  margin-bottom: 20px;
+}
+.sire__description__field{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.sire__description__field p{
+margin: 0;
+margin-left: 5px;
+}
+.sire__gallery{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+-webkit-box-align: start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+
+}
+.sire__gallery img{
+  width: 32%;
+  margin-right: 5px;
+}
+
+.full__photo{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  margin: 0 auto;
+  z-index: 999;
+  background-color: rgba(0,0,0,0.77);
+
+}
+.full__photo__inner{
+  position: absolute;
+  /*top:40px;*/
+ width:100%;
+ height: 100%;
+
+   
+  /*top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);*/
+
+}
+.full__photo__img{
+  display: block;
+margin: 0 auto;
+width: 100%;
+height: 100%;
+-o-object-fit: contain;
+   object-fit: contain;
+
+
+}
+.full__photo__area{
+  position: absolute;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  top:0;
+  height: 100%;
+  width: 100%;
+
+}
+.full__photo__area a{
+-ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+}
+.full__photo__close{
+  position: absolute;
+  top:5px;
+  right:20px;
+  color:white;
+  font-size: 70px;
+  z-index: 100;
+}
+.full__photo__left{
+  position: absolute;
+  top:50%;
+  left:20px;
+  
+}
+.full__photo__right{
+  position: absolute;
+  top:50%;
+  right:20px;
+  
+}
+@media(min-width: 768px){
+  .sireBoys__list,.sireGirls__list{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .sire__item{
+    margin: 0;
+    margin-bottom: 25px;
+    }
+
+  .sire__item:not(:last-child){
+    margin-right:25px;
+  }
+  .full__photo__inner{
+    padding-left:0px;
+    padding-right: 0px;
+    
+  padding-left:10%;
+  padding-right: 10%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+    /*left:20%;
+    transform: translateX(-20%);*/
+
+    }
+    .full__photo__close{
+      top:10px;
+    }
+}
+@media(min-width: 1200px){
+  .sire__item{
+  max-width: 400px;}
+  .full__photo__inner{
+    /*left:40%;
+    transform: translateX(-40%);*/
+  
+    }
+  }
+  /********************КОТЯТА**************************/
+.kittens{
+    background-image: url("../img/section_back2.jpg");
+ padding-bottom: 30px; 
+ background-attachment: fixed;
+}
+  .kittens__wrapper{
+  padding:25px;
+  
+  
+}
+.kittens__parents{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.kittens__parentBlock{
+ display: -webkit-box;
+ display: -ms-flexbox;
+ display: flex;
+ -webkit-box-orient: vertical;
+ -webkit-box-direction: normal;
+     -ms-flex-direction: column;
+         flex-direction: column;
+ -webkit-box-align:center;
+     -ms-flex-align:center;
+         align-items:center;
+}
+.kittens__plus{
+  margin-left: 25px;
+  margin-right: 50px;
+
+}
+.kittens__parents-photo{
+  border-radius: 50%;
+}
+.kittens_parent-name{
+  font-size: 14px;
+}
+.kittens__list{
+ background-color: #fff;
+  list-style: none;
+  padding: 0;
+}
+.kittens__item{
+  position: relative;
+-webkit-box-sizing: border-box;
+        box-sizing: border-box;
+padding: 25px;
+
+
+}
+.kittens__item__link{
+  color:#000;
+  text-decoration: none;}
+.kittens__description{
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  padding-left: 0;
+  
+}
+
+.kittens__description__field{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+ 
+}
+.kittens__description__field p{
+  margin: 0;
+  margin-left:5px;
+  
+}
+.kittens__img{
+  display: block;
+}
+.kittens__link{
+  color:#7b8f38;
+  text-decoration: none;
+}
+.kittens__link:hover{
+  color:#b2c76c;
+}
+
+@media(max-width: 767px){
+  .kittens__item:first-child{
+    border-top: 1px solid grey;
+  }
+  .kittens__item{
+    border-bottom: 1px solid grey;
+  }
+
+  .kittens__img{
+    width: 100%;
+    max-width: 350px;
+  }
+  .kittens__content{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
+  }
+  .kittens__photo{
+    margin: 0 auto;
+  }
+}
+@media(min-width: 768px){
+    .kittens__list{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+   
+
+  }
+  .kittens__item{
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33%;
+            flex: 0 0 33%;
+  }
+   .kittens__item:hover{
+     -webkit-box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, .25);
+             box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, .25);
+  }
+}
+@media(min-width: 1200px){
+  .kittens__item{
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+  }
+}
+ /********************КОТенок 1**************************/
+ .page-kittens{
+     background-image: url("../img/section_back2.jpg");
+     padding-bottom: 30px; 
+     background-attachment: fixed;
+ }
+ .page-kittens__wrapper{
+    padding: 25px;
+   }
+ .kitten_photoBlock{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+ }
+ .kitten_photoBlock div{
+  width:50%;
+ }
+ .kitten__photo{
+    width: 100%;
+    position: relative;
+   }
+   
+   .kitten__status{
+    position: absolute;
+    right:0;
+    top:0;
+    background-color: red;
+    padding: 5px;
+    color:#fff;
+   }
+ .kittens__fastmenu div{
+    display:inline-block;
+  }
+  .kittens__fastmenu a{
+    
+    color:#000;
+  }
+  .kittens__fastmenu {
+    margin-bottom: 20px;
+  }
+  .kitten__about__wrapper{
+    background-color:#fff;
+    padding:10px;
+    -webkit-box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, .25);
+            box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, .25);
+  }
+
+ .kitten__data__field{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .kitten__data__field b{
+    margin-right: 5px;
+  }
+  .kitten__data__field p{
+  margin:0;
+ }
+ .kitten__data{
+  margin-bottom:20px;
+ }
+ .button__wrapper{
+  text-align: center;
+ }
+ .kitten_btn{
+
+  background-color: #7b8f38;
+  border-radius: 10px;
+  color:#fff;
+  
+ }
+ .kitten_btn:hover{
+   background-color: #b2c76c;
+ }
+ 
+
+ 
+ .kittens__also__list{
+  list-style: none;
+  padding: 0;
+ }
+ .kittens__also__item{
+  background-color:#fff;
+  -webkit-box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, .25);
+          box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, .25);
+ }
+ .kittens__also__field{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+ }
+  .kittens__also__field p{
+  margin: 0;
+ }
+ .kittens__also__item{
+  margin-bottom: 20px;
+ }
+.kitten01{
+  margin-bottom: 20px;
+}
+.kittens__also__content{
+  text-decoration: none;
+  color:#000;
+}
+.kittens__also__photo{
+  position: relative;
+}
+.kitten__also__status{
+    position: absolute;
+    right:0;
+    top:0;
+    background-color: red;
+    padding: 5px;
+    color:#fff;
+   }
+ 
+
+.kittens__also__img{
+  width: 100%;
+}
+ @media(min-width: 768px){
+
+  
+  .kitten01__wrapper{
+    max-width: 800px;
+    margin: 0 auto;
+   }
+  .kitten__gallery{
+    max-width: 800px;
+    margin: 0 auto;
+   }
+ .kitten__about{
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, .25);
+           box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, .25);
+ }
+ .kitten__photo{
+    width: 50%;
+      }
+  .kitten__about__wrapper{
+    width: 50%;
+    padding-bottom: 0;
+    -webkit-box-shadow: NONE;
+            box-shadow: NONE;
+  }
+  .kitten__img{
+    display: block;
+  }
+  .kittens__also__list{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .kittens__also__item{
+      width: 33%;
+      margin-right:10px; 
+     }
+  .kittens__also__item:last-child{
+    margin-right: 0;
+ }
+}
+ @media(min-width: 1200px){
+  .page-kittens__wrapper{
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+     }
+     .kitten01__wrapper{
+      max-width: 1000px;
+    }
+     .kitten01{
+    -ms-flex-preferred-size:70%;
+        flex-basis:70%;
+   }
+   .kittens__also{
+      -ms-flex-preferred-size: 30%;
+          flex-basis: 30%;
+      max-width: 250px;
+       }
+       .kittens__also__list{
+        display: block;
+      -webkit-box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, .25);
+              box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, .25);
+      background-color: #fff;
+     }
+     .kittens__also__item{
+      width: 100%;
+      -webkit-box-shadow: none;
+              box-shadow: none;
+      border-top: 2px solid grey;
+     }
+   .kitten__gallery{
+    max-width: 1000px;
+
+   }
+.kitten_photoBlock div{
+  width:33%;
+ }
+ }
+ /***************Выпускники****************************/
+ .graduates__wrapper{
+  padding-left:20px;
+  padding-right: 20px;
+ }
+
+ .graduates__list{
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1400px;
+
+ }
+ .graduates__item{
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, .25);
+          box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, .25);
+  padding: 10px;
+ }
+ .graduates__gallery-list{
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+  -webkit-box-pack:justify;
+      -ms-flex-pack:justify;
+          justify-content:space-between;
+  padding: 0;
+  
+ }
+ .graduates__gallery-item{
+   margin-right: 5px;
+   margin-bottom:5px;
+   
+   width: 50%;
+   
+   background-color: #f7f5f6;
+  
+ }
+ .graduates__gallery__img{
+  display: block;
+  cursor: pointer;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 200px;
+  margin: 0 auto;
+ }
+ @media(max-width: 767px){
+  .graduates__gallery-item{
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+  }
+  .graduates__gallery__img{
+  
+   }
+ }
+ @media(min-width: 768px){
+.graduates__gallery-item{
+  
+  width: 32%
+ }}
+ @media(min-width: 1200px){
+.graduates__gallery-item{
+  
+  width: 24%
+ }}
+ /**************************О питомнике ******************************/
+ .aboutus-page{
+  padding-top:20px;
+  background-image: url("../img/section_back2.jpg");
+     padding-bottom: 30px; 
+     background-attachment: fixed;
+ }
+ .aboutus{
+  
+  min-height:350px;
+  margin-bottom:45px;
+ }
+ .aboutus__title{
+  color:#6d2b5e;
+
+ }
+ .aboutus__img{
+  border-radius: 50%;
+  margin: 0 auto;
+  width: 200px;
+  -webkit-box-shadow: 0px 0px 18px -3px #000;
+          box-shadow: 0px 0px 18px -3px #000;
+  overflow: hidden;
+  margin-bottom: -25px;
+ }
+ .aboutus__img img{
+  display: block;
+ }
+  .aboutus__img img:hover{
+  -webkit-transition:-webkit-transform 0.5s ease;
+  transition:-webkit-transform 0.5s ease;
+  -o-transition:transform 0.5s ease;
+  transition:transform 0.5s ease;
+  transition:transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+  }
+  
+ .aboutus__text{
+  margin-left: 25px;
+  margin-right: 25px;
+  background-color: #fff;
+  padding-left:25px;
+  padding-right: 25px;
+  padding-top:20px;
+  padding-bottom:20px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 0px 18px -3px #000;
+          box-shadow: 0px 0px 18px -3px #000;
+ }
+.aboutus__text p{
+  text-indent: 30px;
+}
+
+
+ @media(min-width: 768px){
+.aboutus{
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  position: relative;
+  width:760px;
+  margin:0 auto;
+  margin-bottom: 25px;
+ }
+.aboutus__text{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+ .aboutus__img{
+  position: absolute;
+  border-radius: 0;
+ }
+ 
+  
+  .block1__img,.block3__img, .block5__img{
+   right:25px;
+   top:25px;
+  }
+ .aboutus__text{
+  width:500px;
+ 
+ }
+
+ .block2__img,.block4__img{
+   left:0px;
+   top:50px;
+   z-index: 2;
+ }
+.block2__text,.block4__text{
+  position: absolute;
+  left:170px;
+  top:25px;
+  padding-left:50px;
+  padding-right: 25px;
+  width: 475px;
+
+}
+
+}
+
+@media(min-width: 1200px){
+.aboutus{
+  width:850px;
+  margin-left:20%;
+ 
+ }
+
+ .aboutus__img{
+  
+  
+  width: 300px;
+  
+ }
+ 
+  .block1__img,.block3__img, .block5__img{
+   right:25px;
+   top:25px;
+  }
+ .aboutus__text{
+  width:500px;
+  background-color: #fff;
+  padding-left:25px;
+  padding-right: 75px;
+  padding-top:20px;
+  padding-bottom:20px;
+  
+ }
+
+ .block2__img,.block4__img{
+   left:0px;
+   top:50px;
+  
+ }
+.block2__text,.block4__text{
+ 
+  left:270px;
+  top:25px;
+  padding-left:50px;
+  padding-right: 25px;
+  width: 475px;
+
+}
+
+}
+ /********************В добрые руки**************************/
+.page-forfree{
+    background-image: url("../img/section_back2.jpg");
+ padding-bottom: 30px; 
+ background-attachment: fixed;
+}
+  .page-forfree__wrapper{
+  padding:25px;
+  
+  
+}
+.forfree-about{
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, .25);
+          box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, .25);
+  padding:20px;
+}
+.forfree-about__block1 b{
+  display: block;
+  margin-bottom: 10px;
+  margin-top:10px;
+}
+.forfree-about__dicsr p{
+  text-indent: 30px;
+}
+.forfree-about__img1, .forfree-about__img2, .forfree-about__img3, .forfree-about__img4{
+  display: block;
+  margin: 0 auto;
+}
+.ingoodhands__list{
+ 
+  list-style: none;
+  padding: 0;
+}
+.ingoodhands__item{
+  background-color: #fff;
+  position: relative;
+-webkit-box-sizing: border-box;
+        box-sizing: border-box;
+padding: 25px;
+
+
+}
+.ingoodhands__item__link{
+  color:#000;
+  text-decoration: none;}
+.ingoodhands__description{
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  padding-left: 0;
+  
+}
+
+.ingoodhands__description__field{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+ 
+}
+.ingoodhands__description__field p{
+  margin: 0;
+  margin-left:5px;
+  
+}
+.ingoodhands__img{
+  display: block;
+}
+.ingoodhands__link{
+  color:#7b8f38;
+  text-decoration: none;
+}
+.ingoodhands__link:hover{
+  color:#b2c76c;
+}
+
+
+
+@media(max-width: 767px){
+  .ingoodhands__item:first-child{
+    border-top: 1px solid grey;
+  }
+  .ingoodhands__item{
+    border-bottom: 1px solid grey;
+  }
+
+  .ingoodhands__img{
+    width: 100%;
+    max-width: 350px;
+  }
+  .ingoodhands__content{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
+  }
+  .ingoodhands__photo{
+    margin: 0 auto;
+  }
+}
+@media(min-width: 768px){
+  .page-forfree__wrapper{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .ingoodhands{
+    -webkit-box-ordinal-group:3;
+        -ms-flex-order:2;
+            order:2;
+
+  }
+  .forfree-about{
+    margin-right: 25px;
+    
+  }
+  
+   .ingoodhands__item:hover{
+     -webkit-box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, .25);
+             box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, .25);
+  }
+
+}
+@media(min-width: 1200px){
+  .ingoodhands__item{
+    width: 370px;
+  }
+   .forfree-about__block1{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 20px;
+}
+.forfree-about__block1 p{
+  margin:0;
+}
+.forfree-about__img1, .forfree-about__img3{
+  margin-right: 10px;
+}
+.forfree-about__img2, .forfree-about__img4{
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  margin-left: 10px;
+}
+ /* .ingoodhands__item{
+    flex: 0 0 25%;
+  } */
+}
+
+
+
+.forfree1__desr{
+  margin-top:25px;
+  -webkit-box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, .25);
+          box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, .25);
+  padding:20px;
+  background-color: #fff;
+}
+.forfree1__desr h3{margin-top: 0;}
+.forfree1__desr p{ text-indent: 30px;}
