@@ -3,6 +3,16 @@
 
 <?php the_post(); ?>
  <main class="page-kittens">
+   <!---------Форма отправки сообщения бронирования----------------------->  
+        <div class="formBooking hidden">
+          <div class="formEmail__wrapper">
+          
+           <div class="booking-form">
+            <?php echo do_shortcode('[contact-form-7 id="214" title="Забронировать котёнка"]');?>
+             <span class="close-popup__booking" tabindex="0">X</span></div>
+          </div>
+       </div>
+      <!---------------------------------------------------------------------> 
  <div class="page-kittens__wrapper">
          <section class="kitten01">
             <div class="kitten01__wrapper">
@@ -12,9 +22,20 @@
                     <div><a class="kittens__fastmenu__name"><?php the_title(); ?></a></div>
                 </nav>
                 <div class="kitten__about">
+                 
                     <div class="kitten__photo">
                         <?php the_post_thumbnail( full ); ?> 
-                        <span <?php post_class('kitten__status'); ?>><?php the_terms( get_the_ID(), 'status1', '', '', '' ); ?></span>
+                        <span <?php post_class('kitten__status'); ?>>
+                          <?php 
+
+                                $cur_terms = get_the_terms( get_the_ID(), 'status1', '', '', '' );
+                                if( is_array( $cur_terms ) ){
+                                  foreach( $cur_terms as $cur_term ){
+                                    echo  $cur_term->name ;
+                                  }
+                                }
+                          ?>
+                        </span>
                     </div>
                     <div class="kitten__about__wrapper">
                         <div class="kitten__data">
@@ -27,7 +48,27 @@
 
                             
                         </div>
-                        <div class="button__wrapper"><button class="kitten__book-btn kitten_btn btn">Забронировать</button></div>
+                        <?php 
+                            $terms = get_the_terms( get_the_ID(), 'status1' );
+                              if( $terms ){
+                                  $term = array_shift( $terms );
+
+                                  // теперь можно можно вывести название термина
+                                  $param = $term->name;
+                                }
+                          
+
+                          if ($param === "Свободен" ){
+                              ?> 
+                              <div class="button__wrapper"><button class="kitten__book-btn kitten_btn btn">Забронировать</button></div>
+
+                              <?php
+                            
+
+                          };
+                          
+                        ?>
+                        
                     </div>
                 </div>
                 

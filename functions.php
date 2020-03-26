@@ -290,8 +290,13 @@ function scripts_theme(){
 		wp_enqueue_script('script', get_template_directory_uri() . '/js/script.js', false, time(),true);
      }
 	
-	wp_enqueue_script('popup', get_template_directory_uri() . '/js/photos-popup.js', false, time(),true);
+	wp_enqueue_script('email', get_template_directory_uri() . '/js/email.js', false, time(),true);
+	
+	
+if (is_singular('kittens')||is_singular('ingoodhands')){
+	wp_enqueue_script('booking', get_template_directory_uri() . '/js/booking.js', false, time(),true);
 
+}
 
 }
 function my_menu(){

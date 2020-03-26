@@ -1,22 +1,6 @@
 <?php get_header() ?>
      <main class="page-main">
-        <!---------Форма отправки сообщения----------------------->  
-         <div class="formEmail hidden">
-          <div class="formEmail__wrapper">
-          <form class="page-form" action="send.php" method="post">
-            <h3>Отправить письмо:</h3>
-          <input class="page-form__input" type="text" name="fio" required placeholder="Укажите ФИО">
-          <input class="page-form__input" type="tel" name="tel" maxlength="15" required
- placeholder="Укажите номер телефона">
-          
-          <textarea class="page-form__textarea"  name="discr" placeholder="Задайте задесь ваш вопрос"></textarea>
-          <input class="page-form__btn kitten_btn btn" type="submit" value="Отправить">
-           <span class="close-popup" tabindex="0">X</span>
-          </form>
-
-        </div>         
-        </div>
-      <!-------------------------------------------------------> 
+    
           
           <section class="slider">
             <h2 class="section-title visually-hidden">Шотландские котята</h2>
@@ -72,9 +56,19 @@
                       <li class="kittens-for-sale__item">
                         <div class="kittens-for-sale__content">
                           <?php the_post_thumbnail( full ); ?>
-                          <span <?php post_class('kitten__status'); ?>>
-                            <?php the_terms( get_the_ID(), 'status1', '', '', '' ); ?>
-                          </span>
+                          <span <?php post_class('kitten__also__status'); ?>   >
+                          
+                          <?php 
+
+                                $cur_terms = get_the_terms( get_the_ID(), 'status1', '', '', '' );
+                                if( is_array( $cur_terms ) ){
+                                  foreach( $cur_terms as $cur_term ){
+                                    echo  $cur_term->name ;
+                                  }
+                                }
+                          ?>
+
+                        </span>
                           <p class="kittens-for-sale__name"><?php the_title(); ?></p>
                           
                         </div>
@@ -98,35 +92,24 @@
           $posts = get_posts( array(
           'numberposts' => 3,
           'category_name'    => new_kittens,
-          'order' => ASC,
+          'orderby' => date,
+          'order' => DESC,
           'post_type'   => 'post',
           'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
           ) );
           foreach( $posts as $post ){ ?>  <?php
           setup_postdata($post);
-          ?>
-           <h2 class="kittens-expect__title section-title"><?php the_title();?></h2>
-          <div class="kittens-expect__parentsBlock">
-                   <div class="kittens-expect__parent">
-                        <a href="<?php the_permalink( '25' ); ?>" ><img src="<?php echo get_template_directory_uri() ?>/img/photos/kukla.jpg" width="200" alt="Посмотреть подробнее"></a>
-                    </div>   
-                    <div class="kittens-expect__plus">
-                        <img src="<?php echo get_template_directory_uri() ?>/img/plus.png" width="50">
-                    </div>
-                    <div class="kittens-expect__parent">
-                         <a href="<?php the_permalink( '25' ); ?>"  ><img src="<?php echo get_template_directory_uri() ?>/img/photos/grand.jpg" width="200" alt="Посмотреть подробнее"></a>
-                    </div>  
-                </div>
-          <div class="kittens-expect__dicsr">
-            <p>
-              <div class="kittens-expect__img" ><?php the_post_thumbnail( full ); ?></div>
-            <?php the_content(); ?>
-            </p>
-            <div class="kittens-expect__img--mobile ">
-                    <?php the_post_thumbnail( full ); ?></div>
-                    <div class="clearfix"></div>
-         </div>
-          
+          ?><div class="kittens-expect__post">
+               <h2 class="kittens-expect__title section-title"><?php the_title();?></h2>
+                <div class="kittens-expect__parent" ><?php the_post_thumbnail( full ); ?></div>
+              <div class="kittens-expect__dicsr">
+               
+                  
+                <div class="kittens-expect__dicsr_wrapper">
+                  <?php the_content(); ?>
+                  </div>
+             </div>
+          </div>
           <?php
           }
           wp_reset_postdata(); // сброс

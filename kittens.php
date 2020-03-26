@@ -69,7 +69,15 @@
 												<?php the_post_thumbnail( full ); ?>
 												<span <?php post_class('kitten__also__status'); ?>   >
 													
-													<?php the_terms( get_the_ID(), 'status1', '', '', '' ); ?>
+													<?php 
+
+																$cur_terms = get_the_terms( get_the_ID(), 'status1', '', '', '' );
+																if( is_array( $cur_terms ) ){
+																	foreach( $cur_terms as $cur_term ){
+																		echo  $cur_term->name ;
+																	}
+																}
+													?>
 
 												</span>
 											</div>

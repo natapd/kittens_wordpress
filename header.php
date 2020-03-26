@@ -16,7 +16,26 @@
     <?php wp_head() ?>
   </head>
   <body>
+    <!---------Форма отправки сообщения----------------------->  
+         <div class="formEmail hidden">
+          <div class="formEmail__wrapper">
+          <!--<form class="page-form" action="send.php" method="post">
+            <h3>Отправить письмо:</h3>
+          <input class="page-form__input" type="text" name="fio" required placeholder="Укажите ФИО">
+          <input class="page-form__input" type="tel" name="tel" maxlength="15" required
+ placeholder="Укажите номер телефона">
+          
+          <textarea class="page-form__textarea"  name="discr" placeholder="Задайте задесь ваш вопрос"></textarea>
+          <input class="page-form__btn kitten_btn btn" type="submit" value="Отправить"> -->
+          <div class="page-form">
+            <?php echo do_shortcode('[contact-form-7 id="213" title="Контактная форма 1"]');?>
+             <span class="close-popup" tabindex="0">X</span></div>
+           
+          
 
+        </div>         
+        </div>
+      <!-------------------------------------------------------> 
     <header class="main-header">
       <h1 class="visually-hidden">Питомник шотландских кошек в Санкт-Петербурге</h1>
         <div class="top-header">

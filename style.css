@@ -611,40 +611,50 @@ max-width: 1200px;
   background-image: url("../mccrae/img/section_back2.jpg");
  padding-bottom: 30px; 
  background-attachment: fixed;
+
 }
-.kittens-expect__parentsBlock{
-display: flex;
-align-items: center;
-justify-content: center;
+.kittens-expect__post{
+  margin-bottom:20px;
+  padding-top:20px;
+  padding-bottom: 20px;
+  box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, .25);
 }
+
+
+
 @media(max-width: 767px){
-  .kittens-expect__parent img{
-    width:150px;
-  }
+.kittens-expect__text figure{
+  margin:0 auto;
 }
+.kittens-expect__dicsr{
+  margin-left:20px;
+  
+ 
+}
+}
+
+
 .kittens-expect__wrapper{
   padding-top:25px;
   padding-left:25px;
   padding-right: 25px;
 }
-.kittens-expect__parent img{
-  border-radius: 50%;
+.kittens-expect__parent{
+  text-align: center;
 }
-.kittens-expect__parent img:hover{
+.kittens-expect__parent:hover{
    transition:transform 0.5s ease;
 transform: scale(1.1);
+
 }
 
 
-.kittens-expect__plus{
-  margin-left:25px;
-  margin-right:25px;
-}
+
 
 .kittens-expect__dicsr{
-  margin: 0 auto;
+  
   margin-top:10px;
-  text-align: center;
+  
  
 }
 .kittens-expect__dicsr img{
@@ -653,54 +663,44 @@ transform: scale(1.1);
   
 }
 
-.kittens-expect__dicsr p{
- 
-  text-align: left;
-}
-.kittens-expect__dicsr span{
-  font-weight: bold;
-  font-size:20px;
-}
-@media(max-width: 767px){
-  .kittens-expect__img{
- display: none;
-}}
+
+
+
 @media(min-width: 768px){
 .kittens-expect__dicsr {
-  
-  width:70%;
+ margin: 0 auto;
+  width: 70%;
+
   background-color: #fff;
   padding:10px 20px;
   box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, .25);
   border-radius: 10px;
 }
+.kittens-expect__dicsr_wrapper{
+   display: flex;
+  flex-wrap: wrap;
+  margin:0 auto;
+  max-width: 800px;
+}
 .kittens-expect__dicsr p{
-  margin: 0;
+  display: block;
+  
   
   padding: 10px;
-  margin-right: 30px;
+  
+ 
   
 }
-.kittens-expect__img{
-  float:right;
- width:50%;
- margin:10px;
+.kittens-expect__dicsr figure{
+
+max-width: 600px;
+ margin:0 auto;
 
 }
-.clearfix::after{
- content: "";
- display: table;
- clear: both;
-}
-.kittens-expect__img--mobile{
-  display: none;
-}
-}
-@media(min-width: 1200px){
-  .kittens-expect__img{
- width:40%;
 
-}
+
+
+
 }
 /****************************************************/
 .about_cattery{
@@ -1722,3 +1722,13 @@ padding: 25px;
 }
 .forfree1__desr h3{margin-top: 0;}
 .forfree1__desr p{ text-indent: 30px;}
+
+.notfound_wrapper{
+  display:flex;
+  justify-content: center;
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+.notfound_text{
+  color:#4B5D12;
+}

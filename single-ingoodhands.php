@@ -1,7 +1,16 @@
 <?php get_header() ?>
 <?php the_post(); ?>
  <main class="page-kittens">
-  
+  <!---------Форма отправки сообщения бронирования----------------------->  
+        <div class="formBooking hidden">
+          <div class="formEmail__wrapper">
+          
+           <div class="booking-form">
+            <?php echo do_shortcode('[contact-form-7 id="214" title="Забронировать котёнка"]');?>
+             <span class="close-popup__booking" tabindex="0">X</span></div>
+          </div>
+       </div>
+  <!---------------------------------------------------------------------> 
         
         <div class="page-kittens__wrapper">
          <section class="kitten01">
